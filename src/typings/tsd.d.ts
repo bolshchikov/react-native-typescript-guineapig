@@ -4,3 +4,4 @@
 /// <reference path="../../node_modules/immutable/dist/immutable.d.ts" />
 /// <reference path="redux-thunk/redux-thunk.d.ts" />
 /// <reference path="redux-logger/redux-logger.d.ts" />
+/// <reference path="react-native-navigation/react-native-navigation.d.ts" />

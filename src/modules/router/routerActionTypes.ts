@@ -1,0 +1,2 @@
+export const INITIALIZATION = 'INITIALIZATION';
+export const NAVIGATION = 'NAVIGATION';

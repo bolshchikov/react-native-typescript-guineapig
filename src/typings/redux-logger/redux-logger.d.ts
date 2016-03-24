@@ -46,5 +46,5 @@ declare module 'redux-logger' {
   // see https://github.com/Microsoft/TypeScript/issues/3612 for more
   namespace createLogger {}
   function createLogger(options?: ReduxLoggerOptions): Redux.Middleware;
-  export = createLogger;
+  export default createLogger;
 }

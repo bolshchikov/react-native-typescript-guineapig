@@ -3,13 +3,19 @@ import { Component, StyleSheet, Text, View, TouchableOpacity} from 'react-native
 import { connect } from 'react-redux';
 
 import * as counterActions from '../modules/counter/counterActions';
-import {CounterModel} from '../modules/counter/counterModel';
+import * as routerActions from '../modules/router/routerActions';
+import { CounterModel } from '../modules/counter/counterModel';
 
-class MainScreen extends Component<any, any> {
+class Login extends Component<any, any> {
 
   onIncrementPress() {
     let { dispatch } = this.props;
     dispatch(counterActions.increment());
+  }
+
+  onLoginPress() {
+    let { dispatch } = this.props;
+    dispatch(routerActions.navigateTo('home'));
   }
 
   render() {
@@ -19,11 +25,19 @@ class MainScreen extends Component<any, any> {
       <View style={{ flex: 1, padding: 20 }}>
 
         <Text style={styles.text}>
+          <Text style={{ fontWeight: '500' }}>Welcome to React Native and Typescript Application</Text>
+        </Text>
+
+        <Text style={styles.text}>
           <Text style={{ fontWeight: '500' }}>Counter: </Text> {counter.get('count') }
         </Text>
 
         <TouchableOpacity onPress={ this.onIncrementPress.bind(this) }>
           <Text style={styles.button}>Increment Counter</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={ this.onLoginPress.bind(this) }>
+          <Text style={styles.button}>Login</Text>
         </TouchableOpacity>
 
       </View>
@@ -53,4 +67,4 @@ function mapStateToProps(state: any) {
   };
 }
 
-export default connect(mapStateToProps)(MainScreen);
+export default connect(mapStateToProps)(Login);
