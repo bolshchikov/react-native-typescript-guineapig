@@ -2,18 +2,22 @@
   "name": "react-native-typescript-guineapig",
   "version": "1.0.0",
   "description": "",
-  
   "private": true,
   "scripts": {
     "build": "gulp build",
     "watch": "gulp watch",
-    "start": "concurrent \"npm run watch\" \"node node_modules/react-native/local-cli/cli.js start\" ",
+    "start": "concurrently \"npm run watch\" \"node node_modules/react-native/local-cli/cli.js start\" ",
     "android": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js run-android",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios"
   },
   "dependencies": {
+    "immutable": "^3.7.6",
     "react": "^0.14.7",
-    "react-native": "^0.22.2"
+    "react-native": "^0.22.2",
+    "react-native-navigation": "^0.1.4",
+    "react-redux": "^4.4.1",
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",

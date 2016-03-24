@@ -2,13 +2,22 @@
   "version": "v4",
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
-  "path": "typings",
-  "bundle": "typings/tsd.d.ts",
+  "path": "src/typings",
+  "bundle": "src/typings/tsd.d.ts",
   "installed": {
     "react-native/react-native.d.ts": {
       "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
     },
     "react/react.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "redux/redux.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "react-redux/react-redux.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "redux-thunk/redux-thunk.d.ts": {
       "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
     }
   }

@@ -1,12 +1,12 @@
- import * as React from 'react';
- import { Component, StyleSheet, Text, View} from 'react-native';
+import * as React from 'react';
+import { Component, StyleSheet, Text, View} from 'react-native';
 
-export default class App extends Component<any, any> {
+export default class MainScreen extends Component<any, any> {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to React!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: 'red'
   },
   instructions: {
     textAlign: 'center',

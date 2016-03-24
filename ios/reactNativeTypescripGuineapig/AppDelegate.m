@@ -9,6 +9,8 @@
 
 #import "AppDelegate.h"
 
+#import "RCCManager.h"
+
 #import "RCTRootView.h"
 
 @implementation AppDelegate

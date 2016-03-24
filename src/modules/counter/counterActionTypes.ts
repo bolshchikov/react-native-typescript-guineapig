@@ -1,0 +1,6 @@
+const enum COUNTER_ACTION_TYPES {
+  INCEREMENT,
+  DECREMENT
+};
+
+export default COUNTER_ACTION_TYPES;
