@@ -1,27 +1,27 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "jsx": "react",
-        "noImplicitAny": true,
-        "experimentalDecorators": true,
-        "preserveConstEnums": true,
-        "outDir": "app",
-        "rootDir": ".",
-        "sourceMap": true,
-        "allowJs": true
-    },
-    "filesGlob": [
-        "typings/**/*.d.ts",
-        "src/**/*.ts",
-        "src/**/*.tsx"
-    ],
-    "exclude": [
-        "typings/browser.d.ts",
-        "typings/browser",
-        "node_modules"
-    ],
-    "compileOnSave": false,
-    "atom": {
-        "rewriteTsconfig": false
-    }
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "outDir": "app",
+    "rootDir": ".",
+    "sourceMap": true,
+    "allowJs": true
+  },
+  "filesGlob": [
+    "typings/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "typings/browser.d.ts",
+    "typings/browser",
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }

@@ -19,6 +19,9 @@
     },
     "redux-thunk/redux-thunk.d.ts": {
       "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "redux-logger/redux-logger.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
     }
   }
 }

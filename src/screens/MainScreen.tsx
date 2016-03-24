@@ -1,41 +1,56 @@
 import * as React from 'react';
-import { Component, StyleSheet, Text, View} from 'react-native';
+import { Component, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { connect } from 'react-redux';
 
-export default class MainScreen extends Component<any, any> {
+import * as counterActions from '../modules/counter/counterActions';
+import {CounterModel} from '../modules/counter/counterModel';
+
+class MainScreen extends Component<any, any> {
+
+  onIncrementPress() {
+    let { dispatch } = this.props;
+    dispatch(counterActions.increment());
+  }
+
   render() {
+    let counter: CounterModel = this.props.counter;
+
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React!
+      <View style={{ flex: 1, padding: 20 }}>
+
+        <Text style={styles.text}>
+          <Text style={{ fontWeight: '500' }}>Counter: </Text> {counter.get('count') }
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload, {'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+
+        <TouchableOpacity onPress={ this.onIncrementPress.bind(this) }>
+          <Text style={styles.button}>Increment Counter</Text>
+        </TouchableOpacity>
+
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
+  text: {
     textAlign: 'center',
-    margin: 10,
-    color: 'red'
+    fontSize: 18,
+    marginBottom: 10,
+    marginTop: 10,
   },
-  instructions: {
+  button: {
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    fontSize: 18,
+    marginBottom: 10,
+    marginTop: 10,
+    color: 'blue'
+  }
 });
+
+function mapStateToProps(state: any) {
+  return {
+    counter: state.counter
+  };
+}
+
+export default connect(mapStateToProps)(MainScreen);

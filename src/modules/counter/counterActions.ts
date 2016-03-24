@@ -1,13 +1,13 @@
-import actions from './counterActionTypes';
+import {INCREMENT_COUNTER, DECREMENT_COUNTER} from './counterActionTypes';
 
 export function increment() {
   return {
-    type: actions.INCEREMENT
+    type: INCREMENT_COUNTER
   };
 }
 
 export function decrement() {
   return {
-    type: actions.DECREMENT
+    type: DECREMENT_COUNTER
   };
 }

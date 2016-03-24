@@ -1,6 +1,2 @@
-const enum COUNTER_ACTION_TYPES {
-  INCEREMENT,
-  DECREMENT
-};
-
-export default COUNTER_ACTION_TYPES;
+export const INCREMENT_COUNTER = 'Increment counter';
+export const DECREMENT_COUNTER = 'Descrement counter';

@@ -1,14 +1,14 @@
-import counterActions from './counterActionTypes';
 import * as Immutable from 'immutable';
+import {CounterModel} from './counterModel';
+import {INCREMENT_COUNTER, DECREMENT_COUNTER} from './counterActionTypes';
 
-type CounterState = Immutable.Map<string, number>;
-let initialState: CounterState = Immutable.Map({ count: 0 });
+let initialState: CounterModel = Immutable.Map({ count: 0 });
 
-let counter: Redux.Reducer = (state: CounterState = initialState, action: any) => {
+let counter: Redux.Reducer = (state: CounterModel = initialState, action: any) => {
   switch (action.type) {
-    case counterActions.INCEREMENT:
+    case INCREMENT_COUNTER:
       return state.update('count', count => count + 1);
-    case counterActions.DECREMENT:
+    case DECREMENT_COUNTER:
       return state.update('count', count => count - 1);
     default:
       return state;
