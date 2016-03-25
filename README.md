@@ -29,5 +29,8 @@ for thousands of libraries by [DefinitelyTyped](http://definitelytyped.org/tsd/)
 |-gulpfile.js
 ```
 
+## How does it work?
+Pretty staright forward. When you run `npm run start` command, `gulp` compiles the `ts` files and then runs `concurrently` `gulp watch` and `react-native start` commands in the same terminal. `gulp` file compiles code to `app` folder mimicking the same structure as in `src` folder. The main `index.ios.js` simply imports the main component from the `app` folder instead of `src`.
+
 ## Credits
 * [@mrpatiwi](https://github.com/mrpatiwi) for initial gulp file
